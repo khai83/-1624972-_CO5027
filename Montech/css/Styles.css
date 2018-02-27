@@ -1,0 +1,108 @@
+﻿*{border:0;
+padding:0; margin:0;}
+
+body {
+	background-color:white;
+}
+#page{
+	width:800px;
+	margin:auto;
+	min-height:500px;
+}
+
+#menu {
+    width: 800px;
+    text-align: center;
+    border-bottom: double;
+    border-top:double;
+    font-size:20px;
+}
+
+#content{
+    padding-top:40px;
+    padding-left:50px;
+    padding-right:10px;
+    background-color:white;
+}
+
+#content2 {
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+a, a:visited{
+	color:black;
+	}
+
+
+
+#menu ul{
+    list-style-type: none;
+    overflow:hidden;
+}
+
+li{
+    display:inline-block;
+}
+
+li a {
+    display:block;
+    padding:14px 18px;
+    text-decoration: none;
+    text-align:center;
+    
+}
+
+li a:hover{
+    font-weight:bold;
+	color:white;
+    background-color:darkgoldenrod;
+}
+
+.header2{
+    font-family:'Franklin Gothic';
+    margin-bottom:40px;
+    color:darkolivegreen;
+    font-size:x-large;
+}
+
+p{
+    font-family:'Times New Roman', Times, serif;
+    text-align:justify;
+    padding-left:30px;
+    word-spacing:3px;
+}
+
+#p1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    padding-left: 30px;
+    font-size:large;
+    font-weight:bold;
+}
+
+
+/*The style below will apply to the element with an
+id of "header" */
+#header h1{
+	width:100%;
+	height:70px;
+	background-color:white;
+    text-align:center;
+    font-family:'Adobe Gurmukhi';
+    padding-top:20px;
+}
+
+#login{
+    float:right;
+}
+
+.icon1{
+    width:100px;
+    height:100px;
+    border:outset;
+    padding:100px 50px;
+
+}
