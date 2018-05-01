@@ -17,6 +17,7 @@ namespace Montech
         string t;
         string[] a = new string[6];
         int gttl = 0;
+        int quanTotal = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,6 +42,8 @@ namespace Montech
                     daTab.Rows.Add(a[0].ToString(), a[1].ToString(), a[2].ToString(), i.ToString(), a[3].ToString());
 
                     gttl = gttl + (Convert.ToInt32(a[1].ToString()) * Convert.ToInt32(a[2].ToString()));
+
+                    quanTotal = quanTotal + (Convert.ToInt32(a[2].ToString()));
                 }
             }
             dataList1.DataSource = daTab;
@@ -48,10 +51,11 @@ namespace Montech
 
             gTotal.Text = "Grand Total: " + string.Format("{0:C}", Convert.ToDecimal(gttl.ToString()));
 
-            Session["GTotal"] = gTotal.ToString();
+            Session["GTotal"] = gttl.ToString();
+            Session["QTotal"] = quanTotal.ToString();
         }
 
-        protected void payment(object sender, EventArgs e)
+            protected void payment(object sender, EventArgs e)
         {
             if (Session["user"] == null)
             {
@@ -61,25 +65,27 @@ namespace Montech
             else
             {
 
-                Response.Redirect("default.aspx");
+                //Response.Redirect("default.aspx");
                 var config = ConfigManager.Instance.GetProperties();
                 var accessToken = new OAuthTokenCredential(config).GetAccessToken();
                 var apiContext = new APIContext(accessToken);
 
                 var purchaseItem = new Item();
                 purchaseItem.name = "Monitor Screen";
-                purchaseItem.currency = "BND";
-                purchaseItem.price = Session["GTotal"].ToString();
+                purchaseItem.currency = "SGD";
+                purchaseItem.price = "1000";
+                purchaseItem.sku = "LA3320Am18";
+                purchaseItem.quantity = "1";
                 
 
                 var transactionDetails = new Details();
                 transactionDetails.tax = "0";
                 transactionDetails.shipping = "0";
-                transactionDetails.subtotal = Session["GTotal"].ToString();
+                transactionDetails.subtotal = "1000";
 
                 var transactionAmount = new Amount();
-                transactionAmount.currency = "BND";
-                transactionAmount.total = Session["GTotal"].ToString();
+                transactionAmount.currency = "SGD";
+                transactionAmount.total = "1000.00";
                 transactionAmount.details = transactionDetails;
 
                 var transaction = new Transaction();
@@ -99,7 +105,7 @@ namespace Montech
 
                 var redirectUrls = new RedirectUrls();
                 redirectUrls.cancel_url = "http://1624972.win.studentwebserver.co.uk/CO5027/Default.aspx";
-                redirectUrls.return_url = "";
+                redirectUrls.return_url = "http://1624972.win.studentwebserver.co.uk/CO5027/Default.aspx";
 
                 var payment = Payment.Create(apiContext, new Payment{
                     intent = "sale",

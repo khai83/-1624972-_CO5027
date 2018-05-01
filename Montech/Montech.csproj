@@ -163,7 +163,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="admin\edit.aspx" />
     <Content Include="admin\index.aspx" />
     <Content Include="admin\UploadImage.aspx" />
@@ -255,13 +254,6 @@
       <DependentUpon>UploadImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="cart.aspx.cs">
       <DependentUpon>cart.aspx</DependentUpon>

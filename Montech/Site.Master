@@ -22,7 +22,6 @@
 <ul>
 <li id="p2"><p>Montech Inc.</p></li>
 <li><a href="~/default" runat="server">Home</a></li>
-<li><a href="~/About" runat="server">About</a></li>
 <li><a href="~/contact" runat="server">Contact Us</a></li>
 <%
     if (Session["user"] == null) { 
@@ -65,7 +64,6 @@
 <div id="sitemap">
 <ul>
 <li><a href="~/default" runat="server">Home</a></li>
-<li><a href="~/About" runat="server">About</a></li>
 <li><a href="~/contact" runat="server">Contact Us</a></li>
 <li class="login1"><a href="~/login" runat="server">Login</a></li>
 </ul>

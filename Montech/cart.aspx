@@ -19,7 +19,7 @@
                 <tr>                  
                     <td><%#Eval("productName") %></td>
                     <td><%#Eval("productPrice") %></td>
-                    <td><%#Eval("quantity") %></td>
+                    <td><%#Eval("quantity") %></td>                    
                     <td><a href="deleteCart.aspx?id=<%#Eval("productID") %>">Remove</a></td>
                 </tr>
             </ItemTemplate>
