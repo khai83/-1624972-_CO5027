@@ -53,6 +53,9 @@ namespace Montech
 
             Session["GTotal"] = gttl.ToString();
             Session["QTotal"] = quanTotal.ToString();
+
+            Label1.Text = Session["GTotal"].ToString();
+            Label2.Text = Session["QTotal"].ToString();
         }
 
             protected void payment(object sender, EventArgs e)
@@ -73,7 +76,7 @@ namespace Montech
                 var purchaseItem = new Item();
                 purchaseItem.name = "Monitor Screen";
                 purchaseItem.currency = "SGD";
-                purchaseItem.price = "1000";
+                purchaseItem.price = Session["GTotal"].ToString();
                 purchaseItem.sku = "LA3320Am18";
                 purchaseItem.quantity = "1";
                 
@@ -81,11 +84,11 @@ namespace Montech
                 var transactionDetails = new Details();
                 transactionDetails.tax = "0";
                 transactionDetails.shipping = "0";
-                transactionDetails.subtotal = "1000";
+                transactionDetails.subtotal = Session["GTotal"].ToString();
 
                 var transactionAmount = new Amount();
                 transactionAmount.currency = "SGD";
-                transactionAmount.total = "1000.00";
+                transactionAmount.total = Session["GTotal"].ToString();
                 transactionAmount.details = transactionDetails;
 
                 var transaction = new Transaction();
