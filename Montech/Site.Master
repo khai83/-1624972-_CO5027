@@ -27,14 +27,14 @@
 <%
     if (Session["user"] == null) { 
         %>
-    <li><a href="~/login" runat="server">Login</a></li>
+    <li class="log"><a href="~/login" runat="server">Login</a></li>
     <% 
            }
            else
            {
 
             %>
-      <li><a href="~/logout" runat="server">Logout</a></li>
+      <li class="log"><a href="~/logout" runat="server">Logout</a></li>
     <%
        
            }

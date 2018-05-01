@@ -10,6 +10,7 @@ Admin Page
 <asp:Content ID="Content3" ContentPlaceHolderID="Content1" runat="server">
    <form id="form2" runat="server">
 
+       <div class="addP">
         <h2>Add Product</h2>
         <p>&nbsp</p>
         <p>&nbsp</p>
@@ -89,6 +90,8 @@ Admin Page
                 <asp:Parameter Name="original_productDesc" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
+
+           </div>
 
         <p>&nbsp</p>
         <p>&nbsp</p>

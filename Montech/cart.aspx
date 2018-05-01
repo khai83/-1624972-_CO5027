@@ -36,7 +36,9 @@
         </div>
         <p></p>
         <p></p>
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="payment" />
+        <div class="payBtn">
+        <asp:Button ID="Button1" runat="server" Text="Check-Out" OnClick="payment" CssClass="pay" />
+        </div>
     </form>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Header3" runat="server">
