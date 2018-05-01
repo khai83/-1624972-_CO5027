@@ -94,7 +94,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <ul>
-            <li><a href="~/admin/list.aspx" runat="server"> Back to List of Product (Admin)</a></li>
+            <li><a href="~/admin/index.aspx" runat="server"> Back to List of Product (Admin)</a></li>
 
         </ul>
     </form>

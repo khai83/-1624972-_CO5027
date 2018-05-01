@@ -15,7 +15,7 @@
         <br />
         <asp:Button CssClass="buttonUp" ID="uploadButton" runat="server" OnClick="updloadButton_Click" Text="Upload" />
         <ul>
-            <li><a href="~/admin/list.aspx" runat="server"> Go Back</a></li>
+            <li><a href="~/admin/index.aspx" runat="server"> Go Back</a></li>
         </ul>
     </form>
 </asp:Content>

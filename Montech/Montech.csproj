@@ -166,7 +166,6 @@
     <Content Include="About.aspx" />
     <Content Include="admin\edit.aspx" />
     <Content Include="admin\index.aspx" />
-    <Content Include="admin\list.aspx" />
     <Content Include="admin\UploadImage.aspx" />
     <Content Include="cart.aspx" />
     <Content Include="Contact.aspx" />
@@ -247,13 +246,6 @@
     </Compile>
     <Compile Include="admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\list.aspx.cs">
-      <DependentUpon>list.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\list.aspx.designer.cs">
-      <DependentUpon>list.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\UploadImage.aspx.cs">
       <DependentUpon>UploadImage.aspx</DependentUpon>
