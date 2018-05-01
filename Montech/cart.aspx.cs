@@ -47,6 +47,8 @@ namespace Montech
             dataList1.DataBind();
 
             gTotal.Text = "Grand Total: " + string.Format("{0:C}", Convert.ToDecimal(gttl.ToString()));
+
+            Session["GTotal"] = gTotal.ToString();
         }
 
         protected void payment(object sender, EventArgs e)
@@ -60,10 +62,64 @@ namespace Montech
             {
 
                 Response.Redirect("default.aspx");
-                /*var config = ConfigManager.Instance.GetProperties();
+                var config = ConfigManager.Instance.GetProperties();
                 var accessToken = new OAuthTokenCredential(config).GetAccessToken();
                 var apiContext = new APIContext(accessToken);
-                */
+
+                var purchaseItem = new Item();
+                purchaseItem.name = "Monitor Screen";
+                purchaseItem.currency = "BND";
+                purchaseItem.price = Session["GTotal"].ToString();
+                
+
+                var transactionDetails = new Details();
+                transactionDetails.tax = "0";
+                transactionDetails.shipping = "0";
+                transactionDetails.subtotal = Session["GTotal"].ToString();
+
+                var transactionAmount = new Amount();
+                transactionAmount.currency = "BND";
+                transactionAmount.total = Session["GTotal"].ToString();
+                transactionAmount.details = transactionDetails;
+
+                var transaction = new Transaction();
+                transaction.description = "Purchasing Monitor Screen";
+                transaction.invoice_number = Guid.NewGuid().ToString();
+                transaction.amount = transactionAmount;
+                transaction.item_list = new ItemList
+                {
+                    items = new List<Item>
+                    {
+                        purchaseItem
+                    }
+                };
+            
+                var payer = new Payer();
+                payer.payment_method = "paypal";
+
+                var redirectUrls = new RedirectUrls();
+                redirectUrls.cancel_url = "http://1624972.win.studentwebserver.co.uk/CO5027/Default.aspx";
+                redirectUrls.return_url = "";
+
+                var payment = Payment.Create(apiContext, new Payment{
+                    intent = "sale",
+                    payer = payer,
+                    transactions = new List<Transaction>
+                    {
+                        transaction
+                    },
+                    redirect_urls = redirectUrls
+                });
+
+                Session["paymentId"] = payment.id;
+
+                foreach(var link in payment.links)
+                {
+                    if (link.rel.ToLower().Trim().Equals("approval_url"))
+                    {
+                        Response.Redirect(link.href);
+                    }
+                }
             }
         }
     }
