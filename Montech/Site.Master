@@ -8,36 +8,83 @@
     <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
 </title>
 <link href="css/Styles.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
 </head>
 
 <body runat="server">
 <div id="page">
-<div id="header">
-<h1>
-    Montech Inc.
-</h1>
-
-</div>
 
 <div id="menu">
+    
 <ul>
+<li id="p2"><p>Montech Inc.</p></li>
 <li><a href="~/default" runat="server">Home</a></li>
-<li><a href="~/product" runat="server">Products</a></li>
 <li><a href="~/About" runat="server">About</a></li>
 <li><a href="~/contact" runat="server">Contact Us</a></li>
-<li id="login"><a href="~/login" runat="server">Login</a></li>
+<%
+    if (Session["user"] == null) { 
+        %>
+    <li><a href="~/login" runat="server">Login</a></li>
+    <% 
+           }
+           else
+           {
+
+            %>
+      <li><a href="~/logout" runat="server">Logout</a></li>
+    <%
+       
+           }
+        %>
+<li class="shopinCart"><a href="cart.aspx" >Shopping Cart</a></li>
+
+
 </ul>
+
+<div class="cartCounter">
+     Item(s): <asp:Label ID="cartCount" runat="server" Text="0"></asp:Label>  |  Total Price: <asp:Label ID="cartPrice" runat="server" Text="0"></asp:Label>
+</div>
 </div>
 
 <div id="content">
-<h2 class="header2"><asp:ContentPlaceHolder ID="Header2" runat="server"></asp:ContentPlaceHolder></h2>
-<p><asp:ContentPlaceHolder ID="Content1" runat="server"></asp:ContentPlaceHolder></p>
+<div class="header2"><asp:ContentPlaceHolder ID="Header2" runat="server"></asp:ContentPlaceHolder></div>
+<div><asp:ContentPlaceHolder ID="Content1" runat="server"></asp:ContentPlaceHolder></div>
 
 </div>
 
 <div id="content2">
 <h3 class="header2"><asp:ContentPlaceHolder ID="Header3" runat="server"></asp:ContentPlaceHolder></h3>
-<p><asp:ContentPlaceHolder ID="Content2" runat="server"></asp:ContentPlaceHolder></p>
+<div><asp:ContentPlaceHolder ID="Content2" runat="server"></asp:ContentPlaceHolder></div>
+</div>
+
+
+<div class="bottomNav">
+<div id="sitemap">
+<ul>
+<li><a href="~/default" runat="server">Home</a></li>
+<li><a href="~/About" runat="server">About</a></li>
+<li><a href="~/contact" runat="server">Contact Us</a></li>
+<li class="login1"><a href="~/login" runat="server">Login</a></li>
+</ul>
+</div>
+
+<div id="info">
+<ul>
+<li>Montech Inc.</li>
+<li>Unit 10, Kompleks Seri Niaga</li>
+<li>Kampong Kiulap</li>
+<li>Bandar Seri Begawan BE1518</li>
+<li>Negara Brunei Darussalam</li>
+</ul>
+</div>
+
+</div>
+
+
+<p id="trademark">Copyright © 2018 Montech Inc. All rights reserved.</p>
 </div>
 </body>
 

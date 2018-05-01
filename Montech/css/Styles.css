@@ -1,108 +1,684 @@
-﻿*{border:0;
-padding:0; margin:0;}
+﻿* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
 
 body {
-	background-color:white;
+    background-color: white;
 }
-#page{
-	width:800px;
-	margin:auto;
-	min-height:500px;
+
+#page {
+    
+    margin: auto;
+    min-height: 500px;
 }
 
 #menu {
-    width: 800px;
     text-align: center;
-    border-bottom: double;
-    border-top:double;
-    font-size:20px;
+    font-size: 16px;
+    color: white;
+    position:fixed;
+    width:100%;
+    opacity:0.9;
 }
 
-#content{
-    padding-top:40px;
-    padding-left:50px;
-    padding-right:10px;
-    background-color:white;
+#content {
+    padding-top: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #content2 {
     padding-top: 40px;
-    padding-left: 50px;
-    padding-right: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#menu a, a:visited {
+    color: white;
+}
+
+
+
+#menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color:dimgray;
+    margin:0;
+    padding:0;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    margin-left: 20px;
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    color: black;
     background-color: white;
 }
 
-a, a:visited{
-	color:black;
-	}
-
-
-
-#menu ul{
-    list-style-type: none;
-    overflow:hidden;
-}
-
-li{
-    display:inline-block;
-}
-
-li a {
-    display:block;
-    padding:14px 18px;
-    text-decoration: none;
+.header2 {
+    font-family:sans-serif;
+    margin-top:50px;
+    margin-bottom: 40px;
+    color: black;
+    font-size:xx-large;
     text-align:center;
-    
 }
 
-li a:hover{
-    font-weight:bold;
-	color:white;
-    background-color:darkgoldenrod;
+.header2 img{
+    width:70%;
 }
 
-.header2{
-    font-family:'Franklin Gothic';
-    margin-bottom:40px;
-    color:darkolivegreen;
-    font-size:x-large;
+#phead {
+    font-family: sans-serif;
+    padding-top: 15px;
+    padding-left: 0;
+    text-align: center;
+    font-size: 20px;
+    word-spacing: 3px;
 }
 
-p{
-    font-family:'Times New Roman', Times, serif;
-    text-align:justify;
-    padding-left:30px;
-    word-spacing:3px;
+#introImage{
+    margin-top:30px;
+}
+.intro {
+    margin-top:20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    word-spacing: 3px;
+    line-height:2;
+    text-indent:40px;
 }
 
 #p1 {
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
     padding-left: 30px;
-    font-size:large;
+    font-size: large;
+    font-weight: bold;
+}
+
+#p2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    padding: 10px 50px;
+    margin-right: 30px;
+    word-spacing: 3px;
+    background-color:white;
+    color:black;
+}
+
+#menu .shopinCart {
+    float: right;
+    padding-right: 40px;
+}
+
+.cartCounter{
+    color:white;
+    float:right;
+    padding:5px 30px;
+    font-size:14px;
+    background-color:darkred;
+    opacity:0.9;
+}
+
+.icon1 {
+    width: 100px;
+    height: 100px;
+    border: outset;
+    padding: 100px 50px;
+}
+
+#form1 li a{
+    color:black;
+}
+
+.bottomNav {
+    margin-top:10%;
+    display:flex;
+    flex-direction:row;
+    background-color: aliceblue;
+    height:150px;
+    width:100%;
+}
+
+#sitemap {
+    padding-top:30px;
+    padding-left:10%;
+    font-size: 14px;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height:1.5;
+}
+
+#sitemap ul li{
+    display: block;
+}
+
+
+#sitemap li a {
+    color: black;
+    text-decoration: none;
+}
+
+#sitemap li a:hover {
+    color: red;
+}
+
+#sitemap1 {
+    padding-top: 20px;
+    padding-left: 10%;
+    font-size: 14px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+}
+
+    #sitemap1 ul li {
+        display: block;
+    }
+
+
+    #sitemap1 li a {
+        color: black;
+        text-decoration: none;
+    }
+
+        #sitemap1 li a:hover {
+            color: red;
+        }
+
+        #siteTitle{
+            font-weight:bold;
+        }
+
+#info {
+    padding-top:15px;
+    padding-left: 60%;
+    font-size: 13px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+}
+
+#info ul li {
+    display: block;
+}
+
+#trademark{
+    background-color:aliceblue;
+    padding-left:10%;
+    font-size:small;
+}
+
+/*about webpage*/
+
+#banner {
+    z-index: -1;
+    position: relative;
+}
+#banner img{
+    width:100%;
+    height:auto;
+    opacity:0.5;
+}
+.textOver{
+    position:absolute;
+    top:35%;
+    left:8%;
+    right:8%;
+    font-size:50px;
+    font-size:4vw;
+    word-spacing:5px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+/*Contact Webpage*/
+#contact {
+    padding-top: 60px;
+    font-size: 18px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+    margin-left:40%;
+}
+
+#contact ul li {
+    display: block;
+    text-decoration:none;
+}
+
+#bannerContact {
+    z-index: -1;
+    position: relative;
+}
+
+    #bannerContact img {
+        width: 40%;
+        height: auto;
+        opacity: 0.5;
+    }
+
+.textOver1 {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    right:30%;
+    font-size: 50px;
+    font-size:4vw;
+    word-spacing: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.textContact{
+    text-align:center;
+    font-size:17px;
+}
+
+.cForm{
+    font-size:medium;
+    text-align:left;
+    margin-left:25%;
+    margin-right:25%;
+    border:ridge;
+}
+    .cForm h3 {
+        margin-left: 40%;
+        margin-right: 30%;
+        margin-top:10px;
+    }
+.cForm p{
+    margin-top:10px;
+    margin-left:10%;
+}
+ .sub{
+        width:70%;
+        height:30px;
+        border:groove;
+    }
+
+.email {
+    width: 70%;
+    height: 30px;
+    border: groove;
+}
+.cForm textarea {
+    border-style: groove;
+    border-width: medium;
+    margin-top: 5px;
+    height: 78px;
+    width: 70%;
+}
+
+#map {
+    height: 300px;
+    width: 600px;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:50px;
+    border:ridge;
+}
+
+.sButton {
+    height:30px;
+    width:80px;
+    background-color:darkblue;
+    color:white;
+    margin-left:10%;
+}
+
+.sButton:hover {
+    opacity:0.7;
+}
+
+/*Register Web*/
+
+.formText{
+    background-color:lightgray;
+    height:20px;
+    border:ridge;
+}
+
+/*Login*/
+
+#reg a{
+    color:blue;
+}
+
+#reg a:visited {
+    color: purple;
+}
+
+.lForm{
+    margin-left:20%;
+    margin-right:20%;
+    border:solid;
+    text-align:center;
+    padding-top:50px;
+}
+
+#form1 h3{
+    text-align:center;
+}
+
+.formButton{
+
+    width:100px;
+    height:30px;
+    border:1px solid;
+}
+
+.formButton:hover{
+
+    opacity:0.7;
+    color:dodgerblue;
+}
+
+/*Admin Page*/
+
+.adminNav{
+    color:white;
+    background-color:darkred;
+}
+
+.adminListView {
+    margin-left: 35%;
+    margin-right: 35%;
+    width:500px;
+    line-height:2;
+}
+
+.adminListView a{
+    color:blue;
+    padding:2px;
+}
+
+.adminListView a:hover {
+    color: purple;
+}
+
+.adminTextBox{
+    background-color:lightgrey;
+    border:inset 2px;
+    margin:5px 15px;
+    width:200px;
+    height:20px;
+
+}
+
+.adminList a{
+    color:blue;
+}
+
+.adminList a:hover {
+    color: purple;
+}
+
+.adminList {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.adminList td{
+    padding:10px 20px;
+    font-size:14px;
+    border:ridge;
+}
+
+.adminList th{
+    font-size:14px;
+    padding: 10px 20px;
+}
+
+.adminButton{
+    background-color:darkred;
+    color:white;
+    margin-top:5px;
+    width:100px;
+    height:30px;
+}
+
+.adminButton:hover {
+    background-color: lightcoral;
+}
+
+#adminLink{
+    text-align:center;
+    position:relative;
+}
+
+
+#adminLink ul {
+    position:absolute;
+    left:40%;
+    right:40%;
+    list-style-type: none;
+    overflow: hidden;
+    width:200px;
+}
+
+#adminLink li a {
+    display: block;
+    padding: 14px 18px;
+    margin-bottom:10px;
+    text-decoration: none;
+    background-color:darkred;
+
+}
+
+#formBtn{
+    width:100%;
+    text-align:center;
+}
+.formInd {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color:darkred;
+    color: white;
+}
+
+.formInd:hover{
+    opacity:0.7;
+}
+#adminLink li a:hover {
+    color: white;
+    background-color:rosybrown;
+}
+
+#formUpload{
+    text-align:center;
+    margin-top:50px;
+}
+
+.buttonUp{
+    margin-top:30px;
+    width:150px;
+    height:30px;
+    border:double;
+}
+
+.buttonUp:hover {
+    opacity:0.7;
+    color:red;
+}
+
+#form2 ul {
+    margin-top:50px;
+    margin-left: 40%;
+    margin-right:40%;
+    list-style-type: none;
+    overflow: hidden;
+    width: 200px;
+    font-size:12px;
+}
+
+#form2 li a {
+    display: block;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: darkred;
+}
+
+#form2 li a:hover {
+    color: white;
+    background-color: rosybrown;
+}
+
+#form2 h2{
+    text-align:center;
+}
+
+.listP{
+    padding-top:30px;
+    border-top:ridge;
+}
+
+#formUpload ul {
+    margin-top: 50px;
+    margin-left: 40%;
+    list-style-type: none;
+    overflow: hidden;
+    width: 200px;
+}
+
+#formUpload li a {
+    display: block;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: darkred;
+}
+
+#formUpload li a:hover {
+     color: white;
+     background-color: rosybrown;
+}
+
+.productItem{
+
+    margin-left:20%;
+    margin-right:20%;
+}
+
+.productList img{
+   width:300px;
+}
+
+.productList ul{
+    list-style-type:none;
+    text-align:center;   
+}
+
+.productList li{
+    display:inline-block;
+}
+
+.productList li a, img {
+    text-decoration: none;
+}
+
+.productList li a:hover {
+    opacity:0.7;
+}
+
+.spacing{
+    margin-top:70px;
+    text-align:center;
+    width:100%;
+}
+
+.spacing h2{
+    color:brown;
+}
+
+.spacing h3{
+    margin-top:50px;
+    margin-bottom:20px;
+}
+
+.spacing p{
+    margin-top:50px;
+}
+.pTitle{
     font-weight:bold;
 }
-
-
-/*The style below will apply to the element with an
-id of "header" */
-#header h1{
-	width:100%;
-	height:70px;
-	background-color:white;
+.imgSize{
+    width:500px;
+}
+#pImage{
+    width:70%;
     text-align:center;
-    font-family:'Adobe Gurmukhi';
-    padding-top:20px;
+    margin-bottom:70px;
 }
 
-#login{
-    float:right;
+.sButton1 {
+    height:30px;
+    width:80px;
+    background-color:darkblue;
+    color:white;
+    margin-left:15px;
 }
 
-.icon1{
-    width:100px;
-    height:100px;
-    border:outset;
-    padding:100px 50px;
+.sButton1:hover {
+    opacity:0.7;
+}
+
+.cart{
+    margin-left:20%;
+}
+
+.cart tr{
+    border:ridge;
+}
+
+.cart h3{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.cart a{
+    color: blue;
+}
+
+.cart a:hover{
+    opacity:0.7;
+}
+
+.cart td{
+    padding: 2px 30px;
+}
+
+.textQuantity {
+    border: ridge;
+    padding:5px;
+    width:70px;
+}
+.toCart{
+    margin-top:30px;
+    text-align:center;
+}
+
+.toCart Literal{
+    color:red;
+}
+
+.grandTotal{
+    margin-top:20px;
+    margin-left:20%;
+    width:575px;
+    text-align:right;
 
 }

@@ -10,69 +10,87 @@
 namespace Montech {
     
     
-    public partial class SiteMaster {
+    public partial class login {
         
         /// <summary>
-        /// Title control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Title;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// cartCount control.
+        /// logUserNBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cartCount;
+        protected global::System.Web.UI.WebControls.TextBox logUserNBox;
         
         /// <summary>
-        /// cartPrice control.
+        /// logPassBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label cartPrice;
+        protected global::System.Web.UI.WebControls.TextBox logPassBox;
         
         /// <summary>
-        /// Header2 control.
+        /// logButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Header2;
+        protected global::System.Web.UI.WebControls.Button logButton;
         
         /// <summary>
-        /// Content1 control.
+        /// errorLoginLiteral control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Content1;
+        protected global::System.Web.UI.WebControls.Literal errorLoginLiteral;
         
         /// <summary>
-        /// Header3 control.
+        /// RegUName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Header3;
+        protected global::System.Web.UI.WebControls.TextBox RegUName;
         
         /// <summary>
-        /// Content2 control.
+        /// RegPassw control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Content2;
+        protected global::System.Web.UI.WebControls.TextBox RegPassw;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// errorRegLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal errorRegLiteral;
     }
 }
