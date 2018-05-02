@@ -9,13 +9,16 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="Content1" runat="server">
     <form id="form1" runat="server">
         <div class ="lForm">
-        <p>Username:</p>
+        <p>
+            <asp:Label ID="Label1" AssociatedControlId="logUserNBox" runat="server" Text="Username:"></asp:Label>
+        </p>
         <p>
             <asp:TextBox CssClass="formText" ID="logUserNBox" runat="server"></asp:TextBox>
         </p>
         <p>&nbsp;</p>
       
-        <p>Password:</p>
+        <p>
+            <asp:Label ID="Label2" AssociatedControlId="logPassBox" runat="server" Text="Password:"></asp:Label></p>
         <p>
             <asp:TextBox CssClass="formText" ID="logPassBox" runat="server" TextMode="password"></asp:TextBox>
         </p>
@@ -54,14 +57,14 @@
                  <p>
                      &nbsp;</p>
             <p>
-                Username:</p>
+                <asp:Label ID="Label3" AssociatedControlId="RegUName" runat="server" Text="Username:"></asp:Label></p>
             <p>
                 <asp:TextBox CssClass="formText" ID="RegUName" runat="server"></asp:TextBox>
         </p>
             <p>
                 &nbsp;</p>
             <p>
-                Password:</p>
+                <asp:Label ID="Label4" AssociatedControlId="RegPassw" runat="server" Text="Password:"></asp:Label></p>
             <p>
                 <asp:TextBox CssClass="formText" ID="RegPassw" runat="server" TextMode="password"></asp:TextBox>
         </p>

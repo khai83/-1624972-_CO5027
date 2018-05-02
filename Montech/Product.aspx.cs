@@ -48,7 +48,7 @@ namespace Montech
             }
             
 
-            if (Convert.ToInt32(TextBox1.Text) > Convert.ToInt32(quantity))
+            if (Convert.ToInt32(itemQuantity.Text) > Convert.ToInt32(quantity))
             {
                 retryQuantity.Text = "Please enter with lower quantity and try again";
             }
@@ -57,19 +57,19 @@ namespace Montech
 
                 if (Request.Cookies["aa"] == null)
                 {
-                    Response.Cookies["aa"].Value = productName.ToString() + "," + productPrice.ToString() + "," + TextBox1.Text + "," + id.ToString();
+                    Response.Cookies["aa"].Value = productName.ToString() + "," + productPrice.ToString() + "," + itemQuantity.Text + "," + id.ToString();
                     Response.Cookies["aa"].Expires = DateTime.Now.AddDays(1);
 
                 }
                 else
                 {
-                    Response.Cookies["aa"].Value = Request.Cookies["aa"].Value + "|" + productName.ToString() + "," + productPrice.ToString() + "," + TextBox1.Text + "," + id.ToString();
+                    Response.Cookies["aa"].Value = Request.Cookies["aa"].Value + "|" + productName.ToString() + "," + productPrice.ToString() + "," + itemQuantity.Text + "," + id.ToString();
                     Response.Cookies["aa"].Expires = DateTime.Now.AddDays(1);
                 }
 
                 SqlCommand cmd1 = con.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
-                cmd1.CommandText = "update tblproduct set quantity=quantity-" + TextBox1.Text + "where productID=" + id;
+                cmd1.CommandText = "update tblproduct set quantity=quantity-" + itemQuantity.Text + "where productID=" + id;
                 cmd1.ExecuteNonQuery();
                 Response.Redirect("product.aspx?id=" + id.ToString());
             }
@@ -80,7 +80,7 @@ namespace Montech
             if (q == 0)
             {
                 lprod.Visible = false;
-                TextBox1.Visible = false;
+                itemQuantity.Visible = false;
                 Button1.Visible = false;
                 retryQuantity.Text = "This product is out of stock";
             }

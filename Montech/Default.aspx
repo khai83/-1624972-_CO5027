@@ -35,7 +35,7 @@
             <ItemTemplate>
                 <li>
                     
-                    <a href="<%#Eval("productID", "Product.aspx?id={0}") %>"><img src="<%#Eval("productID", "productImages/{0}.jpg") %>" alt=<%#Eval("productName") %> />
+                    <a href="<%#Eval("productID", "Product.aspx?id={0}") %>"><img src="<%#Eval("productID", "productImages/{0}.jpg") %>" alt="<%#Eval("productName") %>" />
                        <p>&nbsp;</p> <%#Eval("productName") %>
                     </a>
 

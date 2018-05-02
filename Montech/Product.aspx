@@ -65,7 +65,7 @@
                 </InsertItemTemplate>
                 <ItemTemplate>
                     
-                    <img id="pImage" src="<%#Eval("productID", "productImages/{0}.jpg") %>" alt=<%#Eval("productName") %> />
+                    <img id="pImage" src="<%#Eval("productID", "productImages/{0}.jpg") %>" alt="<%#Eval("productName") %>" />
 
                     <h2><asp:Label ID="productNameLabel" runat="server" Text='<%# Bind("productName") %>' /></h2>
                     <h3>Product Description:</h3>
@@ -94,8 +94,8 @@
             <p>
                 &nbsp;</p>
             <div class="toCart">
-                <asp:Label ID="lprod" runat="server" Text="Enter Quantity"></asp:Label>
-                <asp:TextBox ID="TextBox1" runat="server" CssClass="textQuantity"></asp:TextBox>
+                <asp:Label ID="lprod" AssociatedControlId="itemQuantity" runat="server" Text="Enter Quantity"></asp:Label>
+                <asp:TextBox ID="itemQuantity" type="Text" runat="server" CssClass="textQuantity"></asp:TextBox>
 
                 <asp:Button ID="Button1" runat="server" Text="Add to Cart" OnClick="Button1_Click" CssClass="sButton1" />
             

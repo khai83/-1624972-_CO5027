@@ -296,19 +296,21 @@ body {
 
 .cForm{
     font-size:medium;
-    text-align:left;
     margin-left:25%;
     margin-right:25%;
     border:ridge;
+    text-align:center;
 }
     .cForm h3 {
-        margin-left: 40%;
-        margin-right: 30%;
         margin-top:10px;
     }
 .cForm p{
     margin-top:10px;
-    margin-left:10%;
+
+}
+.labelC{
+    margin-top:10px;
+
 }
  .sub{
         width:70%;
@@ -348,7 +350,6 @@ body {
     width:80px;
     background-color:darkblue;
     color:white;
-    margin-left:10%;
 }
 
 .sButton:hover {

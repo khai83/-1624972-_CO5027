@@ -40,14 +40,14 @@
     
   
     &nbsp;<p>&nbsp;</p>
-    <p>Email</p>
+      <asp:Label ID="Label1" AssociatedControlId="emailTextBox" runat="server" Text="Email" CssClass="labelC"></asp:Label>
     <p>
         <asp:TextBox class="email" ID="emailTextBox" runat="server"></asp:TextBox>
     </p>
     <p>
         <asp:RequiredFieldValidator ID="textBoxV" runat="server" ControlToValidate="emailTextBox" ErrorMessage="Email is Mandatory" ForeColor="Red"></asp:RequiredFieldValidator>
     </p>
-    <p>Subject</p>
+    <asp:Label ID="Label2" AssociatedControlId="txtSubject" runat="server" Text="Subject" CssClass="labelC"></asp:Label>
     <p>
         <asp:TextBox class="sub" ID="txtSubject" runat="server"></asp:TextBox>
     </p>
@@ -55,7 +55,7 @@
         <asp:RequiredFieldValidator ID="subjectTxtV" runat="server" ControlToValidate="txtSubject" ErrorMessage="Subject cannot be empty" ForeColor="Red"></asp:RequiredFieldValidator>
     </p>
    
-    <p>Message:</p>
+    <asp:Label ID="Label3" AssociatedControlId="txtBody" runat="server" Text="Message:" CssClass="labelC"></asp:Label>
     <p>
         <asp:TextBox ID="txtBody" runat="server" TextMode="MultiLine"></asp:TextBox>
     </p>
