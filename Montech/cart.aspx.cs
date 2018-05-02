@@ -39,7 +39,7 @@ namespace Montech
                         a[j] = strArray1[j].ToString();
                     }
 
-                    daTab.Rows.Add(a[0].ToString(), string.Format("{0:C}", Convert.ToDecimal(a[1].ToString()), a[2].ToString(), i.ToString(), a[3].ToString()));
+                    daTab.Rows.Add(a[0].ToString(), a[1].ToString(), a[2].ToString(), i.ToString(), a[3].ToString());
 
                     gttl = gttl + (Convert.ToInt32(a[1].ToString()) * Convert.ToInt32(a[2].ToString()));
 
