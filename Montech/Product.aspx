@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="Montech.Product" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Product: Montech Inc.
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header2" runat="server">
 </asp:Content>
@@ -70,8 +71,6 @@
                     <h3>Product Description:</h3>
                     <asp:Label ID="productDescLabel" runat="server" Text='<%# Bind("productDesc") %>' />
                     <h3>Price:</h3>
-                    <!-- https://www.experts-exchange.com/questions/22996176/format-currency-in-a-repeater.html -->
-
                     <asp:Label ID="productPriceLabel" runat="server" Text='<%# String.Format("{0:C}", Eval("productPrice")) %>' />
                     <h3>Available Stock:</h3>
                     <asp:Label ID="quantityLabel" runat="server" Text='<%# Bind("quantity") %>' />

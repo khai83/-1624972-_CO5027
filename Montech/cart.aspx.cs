@@ -65,7 +65,6 @@ namespace Montech
             else
             {
 
-                //Response.Redirect("default.aspx");
                 var config = ConfigManager.Instance.GetProperties();
                 var accessToken = new OAuthTokenCredential(config).GetAccessToken();
                 var apiContext = new APIContext(accessToken);

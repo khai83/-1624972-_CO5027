@@ -543,6 +543,7 @@ body {
     margin-bottom: 10px;
     text-decoration: none;
     background-color: darkred;
+    text-align:center;
 }
 
 #form2 li a:hover {

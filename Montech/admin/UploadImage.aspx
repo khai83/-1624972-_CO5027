@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="UploadImage.aspx.cs" Inherits="Montech.admin.UploadImage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Admin - Upload Image: Montech Inc.
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header2" runat="server">
     <p>

@@ -1,7 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Montech.SiteMaster" %>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head runat="server">
 <title>
@@ -55,7 +55,7 @@
 </div>
 
 <div id="content2">
-<h3 class="header2"><asp:ContentPlaceHolder ID="Header3" runat="server"></asp:ContentPlaceHolder></h3>
+<div class="header2"><asp:ContentPlaceHolder ID="Header3" runat="server"></asp:ContentPlaceHolder></div>
 <div><asp:ContentPlaceHolder ID="Content2" runat="server"></asp:ContentPlaceHolder></div>
 </div>
 

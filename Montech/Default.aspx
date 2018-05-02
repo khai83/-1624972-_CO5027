@@ -28,7 +28,7 @@
     <form id="form1" runat="server">
    
         <div class="productList">
-        <p>
+        
             <asp:Repeater ID="productList" runat="server" DataSourceID="SqlDataSource1">
                 <HeaderTemplate><ul></HeaderTemplate>
 
@@ -46,7 +46,7 @@
             <FooterTemplate></ul></FooterTemplate>
             </asp:Repeater>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_1624972_co5027_asgConnectionString %>" SelectCommand="SELECT * FROM [tblproduct]"></asp:SqlDataSource>
-        </p>
+        
     </div>
 
     </form>

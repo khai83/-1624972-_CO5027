@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Montech.admin.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
-Admin Page
+Admin Page: Montech Inc.
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header2" runat="server">
     <h3>Admin Page</h3>

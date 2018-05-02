@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Montech.login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Login: Montech Inc.
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header2" runat="server">
     <p>

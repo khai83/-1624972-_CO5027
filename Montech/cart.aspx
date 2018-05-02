@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cart.aspx.cs" Inherits="Montech.cart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    Shopping Cart: Montech Inc.
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Header2" runat="server">
 </asp:Content>
@@ -9,8 +10,8 @@
        <asp:DataList ID="dataList1" runat="server" CssClass ="cart">
 
             <HeaderTemplate>
+                <h3>Shopping Cart</h3>
                 <table>
-                    <h3>Shopping Cart</h3>
                     <th>Product Name</th>
                     <th>Price</th>
                     <th>Quantity</th>

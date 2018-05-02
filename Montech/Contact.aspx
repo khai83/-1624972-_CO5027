@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Montech.Contact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
-    About: Welcome to Montech Inc.</asp:Content>
+    Contact: Montech Inc.</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Header2" runat="server">
     <div id="bannerContact">
     <img src="image/Customer-Services-PPT-Backgrounds.jpg" alt="Montech" />
@@ -83,8 +83,7 @@
 <li>Negara Brunei Darussalam</li>
 </ul>
 </div>
-      <div id="map"><noscript><img src="https://maps.googleapis.com/maps/api/staticmap?center=4.902095,114.927434&zoom=15&size=600x300&maptype=roadmap
-&markers=color:red%7Clabel:S%7C4.902095,114.927434&key=AIzaSyDg26heJqavCEPExhjcNiiqHoS5Hr71M0U" /></noscript></div>
+      <div id="map"><noscript><img src="https://maps.googleapis.com/maps/api/staticmap?center=4.902095,114.927434&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7Clabel:S%7C4.902095,114.927434&key=AIzaSyDg26heJqavCEPExhjcNiiqHoS5Hr71M0U" alt="Location"/></noscript></div>
     <script>
         var map;
         function initMap() {
