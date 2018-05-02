@@ -39,7 +39,7 @@ namespace Montech
                         a[j] = strArray1[j].ToString();
                     }
 
-                    daTab.Rows.Add(a[0].ToString(), a[1].ToString(), a[2].ToString(), i.ToString(), a[3].ToString());
+                    daTab.Rows.Add(a[0].ToString(), string.Format("{0:C}", Convert.ToDecimal(a[1].ToString()), a[2].ToString(), i.ToString(), a[3].ToString()));
 
                     gttl = gttl + (Convert.ToInt32(a[1].ToString()) * Convert.ToInt32(a[2].ToString()));
 
@@ -71,7 +71,7 @@ namespace Montech
 
                 var purchaseItem = new Item();
                 purchaseItem.name = "Monitor Screen";
-                purchaseItem.currency = "SGD";
+                purchaseItem.currency = "GBP";
                 purchaseItem.price = Session["GTotal"].ToString();
                 purchaseItem.sku = "LA3320Am18";
                 purchaseItem.quantity = "1";
@@ -83,7 +83,7 @@ namespace Montech
                 transactionDetails.subtotal = Session["GTotal"].ToString();
 
                 var transactionAmount = new Amount();
-                transactionAmount.currency = "SGD";
+                transactionAmount.currency = "GBP";
                 transactionAmount.total = Session["GTotal"].ToString();
                 transactionAmount.details = transactionDetails;
 
