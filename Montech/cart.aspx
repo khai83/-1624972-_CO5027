@@ -34,12 +34,7 @@
                 <asp:Label ID="gTotal" runat="server" Text="Label"></asp:Label>
             </p>
         </div>
-        <p>
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        </p>
-        <p>
-            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-        </p>
+       
         <div class="payBtn">
         <asp:Button ID="Button1" runat="server" Text="Check-Out" OnClick="payment" CssClass="pay" />
         </div>

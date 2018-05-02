@@ -66,6 +66,9 @@
 <li><a href="~/default" runat="server">Home</a></li>
 <li><a href="~/contact" runat="server">Contact Us</a></li>
 <li class="login1"><a href="~/login" runat="server">Login</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Validate HTML</a></li>
+<li><a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a></li>
+<li><a href="Admin/">Admin</a></li>
 </ul>
 </div>
 

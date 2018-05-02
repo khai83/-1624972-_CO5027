@@ -83,7 +83,8 @@
 <li>Negara Brunei Darussalam</li>
 </ul>
 </div>
-      <div id="map"></div>
+      <div id="map"><noscript><img src="https://maps.googleapis.com/maps/api/staticmap?center=4.902095,114.927434&zoom=15&size=600x300&maptype=roadmap
+&markers=color:red%7Clabel:S%7C4.902095,114.927434&key=AIzaSyDg26heJqavCEPExhjcNiiqHoS5Hr71M0U" /></noscript></div>
     <script>
         var map;
         function initMap() {
@@ -100,5 +101,6 @@
     </script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPqLyjnoQy4k4-tMWhxE97ZuFJpTe5XZ0&callback=initMap"
     async defer></script>
-   
+    
+       
 </asp:Content>

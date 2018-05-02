@@ -222,6 +222,8 @@ body {
 
 #trademark{
     background-color:aliceblue;
+    padding-top:30px;
+    padding-bottom:20px;
     padding-left:10%;
     font-size:small;
 }
@@ -334,6 +336,11 @@ body {
     margin-right:25%;
     margin-top:50px;
     border:ridge;
+}
+
+#map img{
+    height:300px;
+    width:600px;
 }
 
 .sButton {

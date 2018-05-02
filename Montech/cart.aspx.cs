@@ -53,9 +53,6 @@ namespace Montech
 
             Session["GTotal"] = gttl.ToString();
             Session["QTotal"] = quanTotal.ToString();
-
-            Label1.Text = Session["GTotal"].ToString();
-            Label2.Text = Session["QTotal"].ToString();
         }
 
             protected void payment(object sender, EventArgs e)
@@ -108,7 +105,7 @@ namespace Montech
 
                 var redirectUrls = new RedirectUrls();
                 redirectUrls.cancel_url = "http://1624972.win.studentwebserver.co.uk/CO5027/Default.aspx";
-                redirectUrls.return_url = "http://1624972.win.studentwebserver.co.uk/CO5027/Contact.aspx";
+                redirectUrls.return_url = "http://1624972.win.studentwebserver.co.uk/CO5027/deleteCart.aspx";
 
                 var payment = Payment.Create(apiContext, new Payment{
                     intent = "sale",
