@@ -6,8 +6,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Content1" runat="server">
     <form id="formCart" runat="server">
-       
-       <asp:DataList ID="dataList1" runat="server" CssClass ="cart">
+       <div class="cart">
+       <asp:DataList ID="dataList1" runat="server">
 
             <HeaderTemplate>
                 <h3>Shopping Cart</h3>
@@ -31,7 +31,7 @@
             </FooterTemplate>
 
         </asp:DataList>
-
+           </div>
         <div class="grandTotal">
             <p>
                 <asp:Label ID="gTotal" runat="server" Text="Label"></asp:Label>
