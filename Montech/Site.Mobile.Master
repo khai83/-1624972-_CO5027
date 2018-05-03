@@ -1,23 +1,95 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="Montech.Site_Mobile" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="Montech.Site_Mobile" Debug="true" %>
 <%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title> <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder></title>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
-<body>
-    <form id="form1" runat="server">
+<body runat="server">>
+    
     <div>
         <h1>Mobile Master Page</h1>
         <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
         <section class="content-wrapper main-content clear-fix">
+            <div id="page">
+
+<div id="menu">
+    
+<ul>
+<li id="p2"><p>Montech Inc.</p></li>
+<li><a href="~/default" runat="server">Home</a></li>
+<li><a href="~/contact" runat="server">Contact Us</a></li>
+<%
+    if (Session["user"] == null) { 
+        %>
+    <li class="log"><a href="~/login" runat="server">Login</a></li>
+    <% 
+           }
+           else
+           {
+
+            %>
+      <li class="log"><a href="~/logout" runat="server">Logout</a></li>
+    <%
+       
+           }
+        %>
+<li class="shopinCart"><a href="cart.aspx" >Shopping Cart</a></li>
+
+
+</ul>
+
+<div class="cartCounter">
+     Item(s): <asp:Label ID="cartCount" runat="server" Text="0"></asp:Label>  |  Total Price: <asp:Label ID="cartPrice" runat="server" Text="0"></asp:Label>
+</div>
+</div>
+
+<div id="content">
+<div class="header2"><asp:ContentPlaceHolder ID="Header2" runat="server"></asp:ContentPlaceHolder></div>
+<div><asp:ContentPlaceHolder ID="Content1" runat="server"></asp:ContentPlaceHolder></div>
+
+</div>
+
+<div id="content2">
+<div class="header2"><asp:ContentPlaceHolder ID="Header3" runat="server"></asp:ContentPlaceHolder></div>
+<div><asp:ContentPlaceHolder ID="Content2" runat="server"></asp:ContentPlaceHolder></div>
+</div>
+
+
+<div class="bottomNav">
+<div id="sitemap">
+<ul>
+<li><a href="~/default" runat="server">Home</a></li>
+<li><a href="~/contact" runat="server">Contact Us</a></li>
+<li class="login1"><a href="~/login" runat="server">Login</a></li>
+<li><a href="http://validator.w3.org/check?uri=referer">Validate HTML</a></li>
+<li><a href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a></li>
+<li><a href="Admin/">Admin</a></li>
+</ul>
+</div>
+
+<div id="info">
+<ul>
+<li>Montech Inc.</li>
+<li>Unit 10, Kompleks Seri Niaga</li>
+<li>Kampong Kiulap</li>
+<li>Bandar Seri Begawan BE1518</li>
+<li>Negara Brunei Darussalam</li>
+</ul>
+</div>
+
+</div>
+
+
+<p id="trademark">Copyright © 2018 Montech Inc. All rights reserved.</p>
+</div>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </section>
         <friendlyUrls:ViewSwitcher runat="server" />
     </div>
-    </form>
+ 
 </body>
 </html>
