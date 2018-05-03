@@ -12,9 +12,11 @@
             <HeaderTemplate>
                 <h3>Shopping Cart</h3>
                 <table>
+                    <tr>
                     <th>Product Name</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                        </tr>
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>                  

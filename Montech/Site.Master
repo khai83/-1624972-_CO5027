@@ -7,7 +7,7 @@
 <title>
     <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
 </title>
-<link href="css/Styles.css" rel="stylesheet" type="text/css">
+<link href="~/css/Styles.css" rel="stylesheet" type="text/css" runat="server">
 
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
