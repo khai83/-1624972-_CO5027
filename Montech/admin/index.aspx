@@ -105,8 +105,10 @@ Admin Page: Montech Inc.
                 <asp:BoundField DataField="productDesc" HeaderText="Product Desc" SortExpression="productDesc" />
                 <asp:BoundField DataField="productPrice" HeaderText="Product Price" SortExpression="productPrice" />
                 <asp:BoundField DataField="quantity" HeaderText="Quantity" SortExpression="quantity" />
-                <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" ControlStyle-CssClass="adminButton" />
-                <asp:HyperLinkField DataNavigateUrlFields="productID" DataNavigateUrlFormatString="edit.aspx?productID={0}" Text="Edit" />
+                <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" ControlStyle-CssClass="adminButton" >
+<ControlStyle CssClass="adminButton"></ControlStyle>
+                </asp:ButtonField>
+                <asp:CommandField ButtonType="Button" ShowEditButton="True" ControlStyle-CssClass="adminButton"/>
                 <asp:HyperLinkField DataNavigateUrlFields="productID" DataNavigateUrlFormatString="UploadImage.aspx?productID={0}" Text="Upload Image" />
             </Columns>
         </asp:GridView>

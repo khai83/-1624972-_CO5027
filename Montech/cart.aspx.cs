@@ -102,7 +102,7 @@ namespace Montech
 
                 var redirectUrls = new RedirectUrls();
                 redirectUrls.cancel_url = "http://1624972.win.studentwebserver.co.uk/CO5027/cart.aspx";
-                redirectUrls.return_url = "http://1624972.win.studentwebserver.co.uk/CO5027/Default.aspx";
+                redirectUrls.return_url = "http://1624972.win.studentwebserver.co.uk/CO5027/CompletePurchase.aspx";
 
                 try
                 {

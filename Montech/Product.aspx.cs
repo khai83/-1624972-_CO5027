@@ -26,6 +26,7 @@ namespace Montech
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             if (con.State == ConnectionState.Open)
             {
                 con.Close();
