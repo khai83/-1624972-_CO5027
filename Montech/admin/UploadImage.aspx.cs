@@ -27,8 +27,6 @@ namespace Montech.admin
             string filename = productId + ".jpg";
             string saveLocation = Server.MapPath("~/productImages/" + filename);
 
-            /*  https://forums.asp.net/t/1719427.aspx?add+watermark+to+an+image+dynamically+while+uploading+it+and+saving+it+in+a+server+side+folder */
-
             string csName = "ButtonClickScript";
             Type csType = this.GetType();
 

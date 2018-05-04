@@ -406,6 +406,21 @@ body {
     background-color:darkred;
 }
 
+.adminListView {
+    margin-left: 35%;
+    margin-right: 35%;
+    width:500px;
+    line-height:2;
+}
+
+.adminListView a{
+    color:blue;
+    padding:2px;
+}
+
+.adminListView a:hover {
+    color: purple;
+}
 
 .adminTextBox{
     background-color:lightgrey;
@@ -707,7 +722,7 @@ body {
     border: solid 1px;
 }
 
-#compForm{
-    text-align:center;
-    color:brown;
+#compForm {
+    text-align: center;
+    color: brown;
 }
